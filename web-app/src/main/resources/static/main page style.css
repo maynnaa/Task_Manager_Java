@@ -1,0 +1,253 @@
+body {
+  background-image: linear-gradient(135deg, #FAB2FF 10%, #4c0cc4 100%);
+  background-color: #cccccc;
+ }
+
+
+
+.side-panel {
+  width: 200px;
+  height: 600px;
+  background-color: rgb(21, 24, 65);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  right: 80.5%;
+  top: 160px;
+}
+
+.underpanel
+{
+
+  width: 130px;
+  height: 350px;
+  background-color: rgb(21, 24, 65);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 1cm; 
+  top: 150px;
+
+}
+
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  position:relative; 
+  left:50px; 
+  /* Add your logo image path here */
+  background-image: url('flash.png');
+  background-size: cover;
+
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+
+
+
+.client {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  position:relative; 
+  left:-40px; 
+  background-image: url('client.png');
+  background-size: cover;
+  top: 20px;
+}
+
+
+.projet {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  position:relative; 
+  left:-40px; 
+  
+  background-image: url('projet.png');
+  background-size: cover;
+  top: 9px;
+}
+
+.btn_sidepanel_client { 
+  position:relative; 
+  left:10px;
+  top: -45px;
+  border: none;
+  background-color: rgb(21, 24, 65);
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+
+.btn_sidepanel_client:hover{
+color: orange;
+}
+
+
+
+.btn_sidepanel_projet { 
+  position:relative; 
+  left:10px;
+  top: -60px;
+  border: none;
+  background-color: rgb(21, 24, 65);
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+
+.btn_sidepanel_projet:hover{
+color: orange;
+}
+
+
+
+
+.btn_sidepanel_employer { 
+  position:relative; 
+  left:10px;
+  top: -65px;
+  border: none;
+  background-color: rgb(21, 24, 65);
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+
+
+.btn_sidepanel_employer:hover{
+color: orange;
+}
+
+.employer {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  position:relative; 
+  left:-40px; 
+  background-image: url('employer.png');
+  background-size: cover;
+  top: -0px;
+}
+
+.logo_dxc {
+  width: 220px;
+  height: 120px;
+  margin-bottom: 20px;
+  position:relative; 
+  left:580px; 
+  /* Add your logo image path here */
+  background-image: url('dxc.svg.png');
+  background-size: cover;
+  top: -295px;
+}
+
+.btn_sidepanel_deconnecter {
+  position:relative; 
+  left:3px;
+  top: -90px;
+  border: none;
+  background-color: rgb(21, 24, 65);
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  right: 50px;
+}
+
+.btn_sidepanel_deconnecter:hover{
+  color: green;
+  }
+  
+
+
+.se_deconnecter_logo{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  position:relative; 
+  left:-43px; 
+  background-image: url('logout.png');
+  background-size: cover;
+  top: -10px;
+}
+
+
+.main_panel{
+
+  width: 750px;
+  height: 600px;
+  background-color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 9cm; 
+  top:-2px;
+
+}
+
+.mainimg{
+  width: 350px;
+  height: 400px;
+  margin-bottom: 20px;
+  position:relative;  
+  /* Add your logo image path here */
+  background-image: url('imgmain.jpeg');
+  background-size: cover;
+  top: 80px;
+  left: 400px;
+  border-radius: 10px;
+
+}
+
+.mainwriting{
+  width: 300px;
+  height: 600px;
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  right: 12cm; 
+  top:0px;
+}
+
+.para{
+  font-family: FontAwesome;
+  color: rgb(220, 79, 255);
+  padding: 50px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}

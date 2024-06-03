@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bolt DXC TECHNOLOGY</title>
+    <link rel="stylesheet" type="text/css" href="projetemployerstyle.css"> <!-- Link to your CSS file -->
+
+</head>
+<body class="body">
+    <!-- Your content goes here -->
+
+	<div class="side-panel ">
+
+        <div class="logo"></div>
+
+        <div class="underpanel">
+
+
+
+
+            <div class="projet"> </div>
+            <div>
+           <button class="btn_sidepanel_projet">Projets</button>
+            </div>
+
+
+
+
+
+          <div class="se_deconnecter_logo"> </div>
+
+
+            <div>
+                <a th:href="@{/login}">
+            <button class="btn_sidepanel_deconnecter">Se deconnecter</button>
+                </a>
+            </div>
+    </div>
+
+    <div class="logo_dxc"> </div>
+
+        <div class="main_panel">
+            <div class="main">
+                <label class="tache_a_faire">Tâche à faire</label>
+                <div class="tache_info">
+                    <table class="tache_table">
+                        <thead>
+                        <tr>
+                            <th style="color:purple">Nom Tâche</th>
+                            <th style="color:purple">Description</th>
+                            <th style="color:purple">Status de la tâche</th>
+                            <th style="color:purple">Modifier la status de la tâche</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="tache : ${taches}" th:id="${tache.idtache}">
+                            <td th:text="${tache.nomtache}"></td>
+                            <td th:text="${tache.description}"></td>
+                            <td th:text="${tache.status}"></td>
+                            <td>
+                                <select class="status-dropdown">
+                                    <option value="Non débuté" class="red-option" >Non débuté</option>
+                                    <option value="En cours" class="orange-option" >En cours</option>
+                                    <option value="Terminé" class="green-option">Terminé</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const statusDropdowns = document.querySelectorAll(".status-dropdown");
+
+            statusDropdowns.forEach(dropdown => {
+                dropdown.addEventListener("change", function() {
+                    const selectedStatus = this.value;
+                    const taskId = parseInt(this.closest("tr").id);
+
+                    fetch(`/update-status/${taskId}/${selectedStatus}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({}),
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Handle success, maybe update the UI
+                        } else {
+                            // Handle error
+                        }
+                    })
+                    .catch(error => {
+                        // Handle error
+                    });
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+

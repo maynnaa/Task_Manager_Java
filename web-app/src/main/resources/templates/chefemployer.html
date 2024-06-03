@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bolt DXC TECHNOLOGY</title>
+  <link rel="stylesheet" type="text/css" href="chefemployer.css"> <!-- Link to your CSS file -->
+</head>
+<body class="body">
+<!-- Your content goes here -->
+
+<div class="side-panel ">
+
+  <div class="logo"></div>
+
+  <div class="underpanel">
+
+
+
+
+
+
+
+    <div class="projet"> </div>
+    <div>
+      <a th:href="@{/cheprojet}">
+      <button class="btn_sidepanel_projet">Projets</button>
+      </a>
+    </div>
+
+
+    <div class="employer"> </div>
+    <div>
+      <button class="btn_sidepanel_employer">Employé</button>
+    </div>
+
+
+    <div class="se_deconnecter_logo"> </div>
+
+
+    <div>
+      <a th:href="@{/login}">
+      <button class="btn_sidepanel_deconnecter">Se deconnecter</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="logo_dxc"> </div>
+
+  <div class="main_panel">
+
+    <div class="main">
+      <label class="tache_a_faire" >Equipe</label>
+
+      <div class="tache_info">
+        <table class="tache_table">
+          <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="employer : ${employer}">
+            <td th:text="${employer.nom}"></td>
+            <td th:text="${employer.prenom}"></td>
+            <td th:text="${employer.email}"></td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

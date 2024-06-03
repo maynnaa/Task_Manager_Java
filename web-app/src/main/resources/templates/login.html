@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bolt DXC</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>Bonjour</h1>
+            <p><br>Découvrez Bolt,<br>
+                Bienvenue dans Bolt qui simplifie l'organisation de vos projets comme jamais.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                Oubliez le chaos des tableaux de bord désorganisés et des listes interminables,                                <br>
+                En quelque clique vous pourrez voir vos clients et les projets realise,les taches à faire et bien plus<br>
+                Notre interface intuitive vous permet de créer, suivre et collaborer sur vos projets                           <br>
+                en temps réel, où que vous soyez.
+            </p>
+            <span>
+
+		</span>
+        </div>
+    </div>
+    <div th:if="${insertedData == false}" class="red-message">
+        <p>Error: Data insertion failed. Please try again.</p>
+    </div>
+
+    <div class="right">
+        <h5>Connexion</h5>
+        <p>Vous n'avez pas encore de compte ? <a th:href="@{/signup}">Créez-en un </a> cela prends une minute</p>
+        <div class="inputs">
+            <form th:action="@{/login}" method="post">
+                <input type="text" placeholder="Email" name="email">
+                <br>
+                <input type="password" placeholder="mot de passe" name="password">
+                <br><br>
+                <button type="submit">Se connecter</button>
+                <br><br><br>
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+<!-- partial -->
+
+<div class="dxc_image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DXC_Technology_logo_%282021%29.svg/1200px-DXC_Technology_logo_%282021%29.svg.png" />
+</div>
+<style>
+        .red-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+   </style>
+</body>
+</html>

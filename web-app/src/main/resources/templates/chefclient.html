@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bolt DXC TECHNOLOGY</title>
+  <link rel="stylesheet" type="text/css" href="chefclient.css"> <!-- Link to your CSS file -->
+</head>
+<body class="body">
+<!-- Your content goes here -->
+
+<div class="side-panel ">
+
+  <div class="logo"></div>
+
+  <div class="underpanel">
+
+
+
+
+
+
+    <div class="projet"> </div>
+    <div>
+      <a th:href="@{/cheprojet}">
+      <button class="btn_sidepanel_projet">Projetss</button>
+      </a>
+    </div>
+
+
+    <div class="employer"> </div>
+    <div>
+      <a th:href="@{/chefemployer}">
+      <button class="btn_sidepanel_employer">Employé</button>
+      </a>
+    </div>
+
+
+    <div class="se_deconnecter_logo"> </div>
+
+
+    <div>
+      <a th:href="@{/login}">
+      <button class="btn_sidepanel_deconnecter">Se deconnecter</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="logo_dxc"> </div>
+
+  <div class="main_panel">
+
+    <div th:each="client : ${client}" class="client_info">
+
+      <div class="flip-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img th:src="${client.imgurl}" alt="Background Image">
+              <div class="content">
+                <h2 th:text="${client.nom}">Y</h2>
+                <p th:text="${client.email}">Email</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <a th:href="${client.websiteurl}" target="_blank">Visiter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

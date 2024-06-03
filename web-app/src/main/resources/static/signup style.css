@@ -1,0 +1,217 @@
+body {
+  background-image: linear-gradient(135deg, #FAB2FF 10%, #4c0cc4 100%);
+  background-color: #cccccc;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.side-panel {
+  width: 200px;
+  height: 600px;
+  background-color: rgb(21, 24, 65);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.underpanel {
+  width: 130px;
+  height: 350px;
+  background-color: rgb(21, 24, 65);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 20px;
+  top: 680px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px auto;
+  background-image: url('flash.png');
+  background-size: cover;
+  animation: spin 5000ms linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.client,
+.projet,
+.employer,
+.se_deconnecter_logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px auto;
+  background-size: cover;
+}
+
+.client { background-image: url('client.png'); }
+.projet { background-image: url('projet.png'); }
+.employer { background-image: url('employer.png'); }
+.se_deconnecter_logo { background-image: url('logout.png'); }
+
+.btn_sidepanel_client,
+.btn_sidepanel_projet,
+.btn_sidepanel_employer,
+.btn_sidepanel_deconnecter {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: rgb(21, 24, 65);
+  color: whitesmoke;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn_sidepanel_client:hover,
+.btn_sidepanel_projet:hover,
+.btn_sidepanel_employer:hover,
+.btn_sidepanel_deconnecter:hover {
+  color: orange;
+}
+
+.main_panel {
+  width: 750px;
+  height: 600px;
+  background-color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 240px;
+  top: 20px;
+}
+
+.mainimg {
+  width: 350px;
+  height: 400px;
+  margin: 20px auto;
+  background-image: url('imgmain.jpeg');
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.mainwriting {
+  width: 300px;
+  height: 600px;
+  background-color: black;
+  color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.para {
+  color: rgb(220, 79, 255);
+  padding: 50px;
+  line-height: 1.6;
+}
+
+.signuppanel {
+  width: 500px;
+  height: 600px;
+  background-color: rgb(21, 24, 65);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.loginimg {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-image: url('signin.png');
+  background-size: cover;
+}
+
+.label_nom,
+.label_prenom,
+.label_email,
+.label_mdp,
+.label_role,
+.employerr,
+.chef {
+  color: orange;
+  display: block;
+  margin: 10px 0;
+  text-align: left;
+  width: 80%;
+}
+
+.nom_controle,
+.prenom_controle,
+.email_controle,
+.mdp_controle {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.radio1{
+  position: relative;
+  top: 30px;}
+.radio2 {
+  position: relative;
+  top: 30px;
+}
+
+.boutonsigne {
+  width: 80%;
+  padding: 12px 35px;
+  margin-top: 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 20px 0px #49c628a6;
+  background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notice {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.dxcimage {
+  width: 220px;
+  height: 120px;
+  background-image: url('dxc.svg.png');
+  background-size: cover;
+  margin: 20px auto;
+}

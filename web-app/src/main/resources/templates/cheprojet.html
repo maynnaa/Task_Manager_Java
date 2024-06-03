@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Task Manager</title>
+  <link rel="stylesheet" type="text/css" href="chefprojet.css"> <!-- Link to your CSS file -->
+</head>
+<body class="body">
+<!-- Your content goes here -->
+
+<div class="side-panel ">
+
+
+  <div class="underpanel">
+
+    <div class="projet"> </div>
+    <div>
+      <button class="btn_sidepanel_projet">Projets</button>
+    </div>
+
+
+    <div class="employer"> </div>
+    <div>
+        <a th:href="@{/chefemployer}">
+      <button class="btn_sidepanel_employer">Employé</button>
+        </a>
+    </div>
+
+
+    <div class="se_deconnecter_logo"> </div>
+
+
+    <div>
+        <a th:href="@{/login}">
+      <button class="btn_sidepanel_deconnecter">Se deconnecter</button>
+        </a>
+    </div>
+  </div>
+
+  <div class="logo_dxc"> </div>
+
+  <div class="main_panel">
+
+    <form method="post" action="/createTache" id="myForm">
+     <label class="titre_tache">Création d'une tâche</label>
+     <label class="nom_tache">Nom de la tache :</label>
+     <input type="text" name="nom" class="nom_input" required>
+
+     <label class="desc_tache">Description de la tache :</label>
+     <input type="text" name="description" class="description_input" required>
+
+        <label class="affect">Affecter la tâche à :</label>
+        <select class="drop" name="employerId" required>
+            <option value="" disabled selected>Sélectionner un employé(e)</option>
+            <option th:each="employer : ${employers}" th:value="${employer.idemployer}" th:text="${employer.email}"></option>
+        </select>
+        <button type="submit" class="boutonsigne" id="submitBtn">Enregistrer la tâche</button>
+    </form>
+
+      <div class="circular-progress-bar">
+          <svg class="circle" width="100" height="100">
+              <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+              <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+          </svg>
+      </div>
+
+      <label th:text="${moyenne} + '%'" class="star"> </label>
+
+
+  </div>
+    <script>
+
+const form = document.getElementById('myForm');
+const submitBtn = document.getElementById('submitBtn');
+const circleProgress = document.querySelector('.circle-progress');
+const starLabel = document.querySelector('.star');
+
+form.addEventListener('submit', function(event) {
+    if (!form.checkValidity()) {
+        event.preventDefault(); // Prevent form submission
+    }
+});
+
+form.addEventListener('input', function() {
+    const formValid = form.checkValidity();
+    submitBtn.disabled = !formValid;
+});
+
+
+function updateCircularProgress() {
+    const percentage = parseInt(starLabel.textContent); // Parse the percentage value
+    const circumference = 2 * Math.PI * 45;
+    const dashArrayValue = (percentage / 100) * circumference;
+
+    circleProgress.style.strokeDasharray = dashArrayValue + ' ' + circumference;
+}
+
+updateCircularProgress(); // Call the function initially
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
