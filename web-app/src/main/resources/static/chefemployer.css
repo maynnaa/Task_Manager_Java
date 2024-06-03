@@ -16,7 +16,11 @@ body {
     right: 80.5%;
     top: 160px;
   }
-  
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
   .underpanel
   {
   

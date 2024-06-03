@@ -8,7 +8,11 @@ body {
 
  
 }
-
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+}
 .box-form {
   margin: 0 auto;
   width: 80%;

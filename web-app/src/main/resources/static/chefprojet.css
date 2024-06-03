@@ -3,8 +3,12 @@ body {
     background-color: #cccccc;
 
    }
-  
-  
+
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
   
   .side-panel {
     width: 200px;
