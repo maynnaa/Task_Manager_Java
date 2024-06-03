@@ -2,11 +2,21 @@ body {
   background-image: linear-gradient(135deg, #FAB2FF 10%, #4c0cc4 100%);
   background-color: #cccccc;
  }
+<<<<<<< Updated upstream
 .page-title {
   text-align: center;
   font-size: 2em;
   margin: 20px 0;
 }
+||||||| Stash base
+
+=======
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin:20px 0;
+}
+>>>>>>> Stashed changes
 
 
 .side-panel {
