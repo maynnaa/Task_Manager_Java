@@ -3,11 +3,23 @@ body {
   background-color: #cccccc;
 
  }
+<<<<<<< Updated upstream
 .page-title {
   text-align: center;
   font-size: 2em;
   margin: 20px 0;
 }
+||||||| Stash base
+
+=======
+
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  margin:20px 0;
+}
+
+>>>>>>> Stashed changes
 .side-panel {
   width: 300px;
   height: 200px;
